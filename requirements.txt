@@ -1,0 +1,3 @@
+gym==0.21.0  # 与 `gym-super-mario-bros` 兼容的版本
+gym-super-mario-bros==7.3.0
+stable_baselines3==1.6.0  # 与上述 `gym` 版本兼容的 `stable-baselines3` 版本

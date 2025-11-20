@@ -1,0 +1,27 @@
+setuptools==65.5.0
+wheel==0.38.4
+pip==20.2.4
+
+
+tensorboard  # 用于可视化训练过程的 TensorBoard
+six # 依赖库，某些包可能需要它
+protobuf==3.20.3  # 解决与某些库的兼容性问题
+icecream # 便捷的调试和打印工具
+imageio  # 图像处理库，某些环境可能需要它
+opencv-python  # 计算机视觉库，某些环境可能需要它
+nes-py==8.2.1  # 与 `gym-super-mario-bros` 兼容的 `nes-py` 版本
+numpy ==1.24.4 # 数值计算库，确保与其他库兼容
+
+shimmy>=2.0 # `stable-baselines3` 的依赖库，确保版本兼容
+
+gym==0.21.0  # 与 `gym-super-mario-bros` 兼容的版本
+gym-super-mario-bros==7.3.0
+stable_baselines3==1.6.0  # 与上述 `gym` 版本兼容的 `stable-baselines3` 版本
+
+miniconda3 # 使用miniconda3 环境管理器来管理python环境
+python==3.8.8  # 确保使用与上述库兼容的 Python 版本
+
+
+# 上述安装完成之后，需要按照个人的电脑配置安装对应的版本的torch
+# 例如我的电脑是CUDA 13.0的版本，所以我安装的命令是：
+pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu130

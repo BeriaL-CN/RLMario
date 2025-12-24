@@ -1,3 +1,4 @@
+#用于测试马里奥环境是否能正常运行，导出游戏画面
 from nes_py.wrappers import JoypadSpace
 import gym_super_mario_bros
 from gym_super_mario_bros.actions import SIMPLE_MOVEMENT

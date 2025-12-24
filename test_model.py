@@ -1,3 +1,4 @@
+#用于测试训练好的模型，导出游戏画面查看模型训练好的路径表现
 import os
 from gym.wrappers import GrayScaleObservation, ResizeObservation
 from icecream import ic
@@ -13,11 +14,11 @@ from train import make_env
 
 def main():
     # 路径
-    model_dir= r'monitor_log/best_model/best_model.zip'
+    model_dir= r'ppo_mario.zip'
     # 初始化环境
     env = SubprocVecEnv([make_env for _ in range(1)])
     env = VecFrameStack(env, 4, channels_order='last')  # 帧叠加
-    model = PPO.load(model_dir, env=env)
+    model = PPO.load(model_dir, env=env, verbose=0) # 加载模型，不输出日志
     # 开始玩游戏
     obs = env.reset()
     ep_len = 10000
@@ -25,9 +26,9 @@ def main():
         obs = obs.copy()  # 复制数组以避免负步长问题
         action, _ = model.predict(obs)
         obs, reward, done, info = env.step(action)
-        print('reward:',reward)
         env.render('human')  # 显示游戏画面
         # 打印 reward
+        # print('reward:',reward)
         # print('reward_sum:', reward_sum)
         if done:
             obs = env.reset()

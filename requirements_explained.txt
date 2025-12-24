@@ -10,7 +10,7 @@ icecream # 便捷的调试和打印工具
 imageio  # 图像处理库，某些环境可能需要它
 opencv-python  # 计算机视觉库，某些环境可能需要它
 nes-py==8.2.1  # 与 `gym-super-mario-bros` 兼容的 `nes-py` 版本
-numpy ==1.24.4 # 数值计算库，确保与其他库兼容
+numpy==1.24.4 # 数值计算库，确保与其他库兼容
 
 shimmy>=2.0 # `stable-baselines3` 的依赖库，确保版本兼容
 
